@@ -38,7 +38,7 @@ public class EeveesController {
         return new NameUpdateResponse(nameUpdateResponse.getFlameEevee()+"に進化した！");
     }
     @DeleteMapping("/eevees/{id}")
-    public NameDeleteResponse updateName(@PathVariable int id, @RequestBody NameDeleteRequest nameUpdateResponse) {
-        return new NameDeleteResponse(nameUpdateResponse.getWaterEevee()+"と"+nameUpdateResponse.getThunderEevee()+"と"+nameUpdateResponse.getFlameEevee()+"を逃がした");
+    public NameDeleteResponse updateName(@PathVariable int id, @RequestBody NameDeleteRequest nameDeleteRequest) {
+        return new NameDeleteResponse(nameDeleteRequest.getWaterEevee()+"と"+nameDeleteRequest.getThunderEevee()+"と"+nameDeleteRequest.getFlameEevee()+"を逃がした");
     }
 }
